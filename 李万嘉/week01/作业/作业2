@@ -69,11 +69,12 @@ Other
 if __name__ == "__main__":
     row_num = random.randint(0,5000)
     row_data = dataset.iloc[row_num]
-    print("row:", row_num)
+    # print("row:", row_num)
     c1 = row_data.iloc[0]
     c2 = row_data.iloc[1]
     print(f"row_data:{row_data.iloc[0]},type:{row_data.iloc[1]}")
     mod_name1 = "qwen-flash"
     mod_name2 = "deepseek-v3.2"
-    print(f"大语言模型:{mod_name1},结果: {text_calssify_using_llm(row_data.iloc[0],mod_name1)}")
-    print(f"大语言模型:{mod_name2},结果: {text_calssify_using_llm(row_data.iloc[0],mod_name2)}")
+    print(f"机器学习结果: {text_calssify_using_ml(row_data.iloc[0])}")
+    print(f"{mod_name1}分类结果: {text_calssify_using_llm(row_data.iloc[0],mod_name1)}")
+    print(f"{mod_name2}分类结果: {text_calssify_using_llm(row_data.iloc[0],mod_name2)}")
